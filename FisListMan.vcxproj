@@ -154,10 +154,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\CommandHandler.h" />
     <ClInclude Include="include\Command.h" />
     <ClInclude Include="include\pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Entity\CommandHandler.cpp" />
     <ClCompile Include="src\Command.cpp" />
     <ClCompile Include="flm.cpp" />
     <ClCompile Include="src\pch.cpp">
