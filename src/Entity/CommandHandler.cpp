@@ -14,18 +14,20 @@ CommandHandler::~CommandHandler()
 
 void CommandHandler::handle_command(Command cmd, char** args)
 {
-	map<Command, function<void()>> cmd_map = {
-		{ Command::CREATE, []() {} },
-		{ Command::DELETE, []() {} },
-		{ Command::ADD, []() {} },
-		{ Command::CHECK, []() {}},
-		{ Command::VIEW, []() {} }
+	typedef void (CommandHandler::*func_ptr)(char**);
+	func_ptr test = handle_create;
+	map<Command, func_ptr> cmd_map = {
+		{ Command::CREATE, handle_create },
+		{ Command::DELETE, handle_delete },
+		{ Command::ADD, handle_add },
+		{ Command::CHECK, handle_check },
+		{ Command::VIEW, handle_view }
 	};
 }
 
 void CommandHandler::handle_create(char** args)
 {
-	string list_name = args[0];
+	char* list_name = args[0];
 }
 
 void CommandHandler::handle_delete(char** args)

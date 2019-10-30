@@ -18,7 +18,7 @@ int main(int argc, char** argv)
 		{ "chk", Command::CHECK },
 		{ "view", Command::VIEW },
 	};
-	// Handle the user's command
+	// Handle the user's command // TODO: Catch typos gracefully
 	Command cmd = command_map.find(command_str)->second;
 	if (cmd == Command::CREATE)
 	{
