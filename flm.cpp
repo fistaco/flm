@@ -14,7 +14,7 @@ int main(int argc, char** argv)
 		{ "del", Command::DELETE },
 		{ "add", Command::ADD },
 		{ "remove", Command::REMOVE },
-		{ "check", Command::CHECK},
+		{ "check", Command::CHECK },
 		{ "chk", Command::CHECK },
 		{ "view", Command::VIEW },
 	};
