@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 		{ "delete", Command::DELETE },
 		{ "del", Command::DELETE },
 		{ "add", Command::ADD },
-		{ "remove", Command::CREATE },
+		{ "remove", Command::REMOVE },
 		{ "check", Command::CHECK},
 		{ "chk", Command::CHECK },
 		{ "view", Command::VIEW },
