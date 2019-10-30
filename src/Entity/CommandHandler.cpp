@@ -17,11 +17,11 @@ void CommandHandler::handle_command(Command cmd, char** args)
 	// Map commands to function pointers
 	typedef void (CommandHandler::*func_ptr)(char**);
 	map<Command, func_ptr> cmd_map = {
-		{ Command::CREATE, handle_create },
-		{ Command::DELETE, handle_delete },
-		{ Command::ADD, handle_add },
-		{ Command::CHECK, handle_check },
-		{ Command::VIEW, handle_view }
+		{ Command::CREATE, &CommandHandler::handle_create },
+		{ Command::DELETE, &CommandHandler::handle_delete },
+		{ Command::ADD, &CommandHandler::handle_add },
+		{ Command::CHECK, &CommandHandler::handle_check },
+		{ Command::VIEW, &CommandHandler::handle_view }
 	};
 
 	// Call the handler corresponding to the given command
