@@ -1,6 +1,7 @@
 #include <iostream>
-#include "include/Command.h"
 #include <map>
+#include "include/Command.h"
+#include "include/CommandHandler.h"
 
 using namespace std;
 
@@ -29,10 +30,8 @@ int main(int argc, char** argv)
 	
 	// Handle the user's command // TODO: Catch unusable input gracefully
 	Command cmd = command_map.find(command_str)->second;
-	if (cmd == Command::CREATE)
-	{
-		cout << "Ayy lmao\n";
-	}
+	CommandHandler cmd_handler;
+	cmd_handler.handle_command(cmd, cmd_args);
 
 	return 0;
 }

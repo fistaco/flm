@@ -2,6 +2,7 @@
 #include "../../include/Command.h"
 #include <map>
 #include <functional>
+#include <iostream>
 
 using namespace std;
 
@@ -32,6 +33,7 @@ void CommandHandler::handle_command(Command cmd, char** args)
 void CommandHandler::handle_create(char** args)
 {
 	char* list_name = args[0];
+	cout << "Creating list with name " << list_name << "\n";
 }
 
 void CommandHandler::handle_delete(char** args)
