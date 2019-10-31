@@ -18,7 +18,16 @@ int main(int argc, char** argv)
 		{ "chk", Command::CHECK },
 		{ "view", Command::VIEW },
 	};
-	// Handle the user's command // TODO: Catch typos gracefully
+
+	// Put the commands arguments in one array
+	char** cmd_args = new char*[argc - 2];
+	for (int i = 0; i < argc - 2; i++)
+	{
+		char* arg = argv[i + 2];
+		cmd_args[i] = arg;
+	}
+	
+	// Handle the user's command // TODO: Catch unusable input gracefully
 	Command cmd = command_map.find(command_str)->second;
 	if (cmd == Command::CREATE)
 	{
