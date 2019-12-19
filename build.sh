@@ -1,0 +1,1 @@
+g++ -I include/ -o flm flm.cpp src/Entity/Command.cpp src/Entity/CommandHandler.cpp
